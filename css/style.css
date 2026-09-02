@@ -1,0 +1,320 @@
+/* =================================
+   CONFIGURACIÓN GENERAL
+   ================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+    color: #FFFFFF;
+
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* =================================
+   BARRA DE NAVEGACIÓN
+   ================================= */
+
+.navbar {
+    background-color: #000000 !important;
+
+    padding: 14px 0;
+
+    border-bottom: 2px solid #1E90FF;
+
+    box-shadow: 0 3px 10px rgba(30, 144, 255, 0.25);
+}
+
+.navbar .container {
+    max-width: none;
+
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+/* Nombre de la tienda */
+
+.navbar-brand {
+    color: #FFFFFF !important;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #39FF14 !important;
+}
+
+
+/* =================================
+   MENÚ DE NAVEGACIÓN
+   ================================= */
+
+.navbar-nav {
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+
+    padding: 9px 14px !important;
+
+    border-radius: 6px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.nav-link:hover {
+    background-color: #1E90FF;
+    color: #FFFFFF !important;
+}
+
+
+/* Página actual */
+
+.nav-link.active {
+    color: #FFFFFF !important;
+}
+
+
+/* =================================
+   CARRITO
+   ================================= */
+
+.bi-cart {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+
+/* =================================
+   CONTENIDO PRINCIPAL
+   ================================= */
+
+main {
+    padding: 45px 25px;
+
+    background-color: #000000;
+}
+
+
+/* =================================
+   TÍTULO PUBLICACIONES
+   ================================= */
+
+main h2 {
+    margin: 0 auto 40px auto;
+
+    max-width: 1100px;
+
+    padding-bottom: 15px;
+
+    color: #FFFFFF;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+
+    text-align: center;
+
+    border-bottom: 4px solid #1E90FF;
+}
+
+
+/* =================================
+   CONTENEDOR DE BLOGS
+   ================================= */
+
+.Blog {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =================================
+   TARJETAS DEL BLOG
+   ================================= */
+
+.blog-card {
+    background-color: #000000;
+
+    border: 2px solid #1E90FF;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(30, 144, 255, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.blog-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #39FF14;
+
+    box-shadow: 0 10px 25px rgba(57, 255, 20, 0.20);
+}
+
+
+/* =================================
+   IMÁGENES
+   ================================= */
+
+.blog-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+
+
+
+.blog-content {
+    padding: 25px;
+}
+
+
+
+
+.blog-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #FFFFFF;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+
+
+.blog-content p {
+    margin-bottom: 22px;
+
+    color: #D3D3D3;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+
+
+.blog-btn {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    background-color: #1E90FF;
+
+    color: #FFFFFF;
+
+    border-radius: 6px;
+
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+
+
+
+.blog-btn:hover {
+    background-color: #39FF14;
+
+    color: #000000;
+}
+
+
+
+.navbar-toggler {
+    border: 2px solid #FFFFFF;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 8px #1E90FF;
+}
+
+.footer {
+    margin-top: 50px;
+
+    padding: 35px 20px;
+
+    background-color: #000000;
+
+    border-top: 2px solid #1E90FF;
+
+    text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 30px 15px;
+    }
+
+    main h2 {
+        font-size: 28px;
+    }
+
+    .Blog {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card img {
+        height: 200px;
+    }
+
+    .navbar .container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nav-link {
+        padding: 8px 10px !important;
+    }
+}
