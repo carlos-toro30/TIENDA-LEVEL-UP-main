@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* LAYOUT */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: white;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 35px;
+    font-size: 22px;
+}
+
+.categoria {
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.sidebar nav a {
+    display: block;
+
+    padding: 12px 10px;
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    margin-bottom: 5px;
+}
+
+.sidebar nav a:hover {
+    background-color: #444;
+}
+
+
+/* BOTÓN VOLVER */
+
+.volver {
+    margin-top: auto;
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: white;
+    text-decoration: none;
+
+    border: 1px solid #666;
+    border-radius: 6px;
+}
+
+.volver:hover {
+    background-color: #444;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+}
+
+
+/* BARRA SUPERIOR */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 28px;
+}
+
+.topbar a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* BIENVENIDA */
+
+.bienvenida {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida h2 {
+    margin-bottom: 10px;
+}
+
+
+/* PANELES */
+
+.paneles {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* TARJETAS */
+
+.panel {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel h2 {
+    margin-bottom: 12px;
+}
+
+.panel p {
+    margin-bottom: 20px;
+
+    color: #666;
+}
+
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.botones a {
+    display: block;
+
+    padding: 12px;
+
+    background-color: #eee;
+
+    color: #333;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.botones a:hover {
+    background-color: #ddd;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .admin-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .paneles {
+        grid-template-columns: 1fr;
+    }
+}
