@@ -53,7 +53,7 @@ TIENDA-LEVEL-UP/
 
 ### Licencia
 ```
-Copyright (c) 2026  carlos-toro30, ShamxUC
+Copyright (c) 2026  carlos-toro30, ShamxUC, ValeCaceres189
 
 Todos los derechos reservados.
 
