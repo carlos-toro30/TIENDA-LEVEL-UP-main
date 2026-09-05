@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Level-Up Gamer</title>
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Ajuste específico para mostrar 4 columnas como en el Wireframe en pantallas grandes */
+        @media (min-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <a href="../PaginaMadre.html" class="navbar-brand">👾 Level-Up Gamer</a>
+            
+            <nav class="navbar-nav" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                <a href="../PaginaMadre.html" class="nav-link">Home</a>
+                <a href="Productos.html" class="nav-link active">Productos</a>
+                <a href="Nosotros.html" class="nav-link">Nosotros</a>
+                <a href="Blogs.html" class="nav-link">Blogs</a>
+                <a href="Contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="navbar-nav" style="display: flex;">
+                <div class="nav-link" onclick="toggleCart()" style="cursor: pointer;">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <h2>PRODUCTOS</h2>
+
+        <!-- GRILLA DE PRODUCTOS (12 TARJETAS COMO EN EL WIREFRAME) -->
+        <div class="Blog product-grid">
+            
+            <!-- TARJETA 1 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+1" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(1)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 2 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+2" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(2)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 3 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+3" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(3)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 4 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+4" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(4)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 5 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+5" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(5)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 6 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+6" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(6)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 7 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+7" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(7)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 8 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+8" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(8)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 9 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+9" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(9)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 10 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+10" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(10)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 11 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+11" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(11)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+            <!-- TARJETA 12 -->
+            <div class="blog-card" style="text-align: center;">
+                <img src="https://via.placeholder.com/300x200?text=Producto+12" alt="Product Title">
+                <div class="blog-content">
+                    <h3>Product Title</h3>
+                    <p style="color: #39FF14; font-weight: bold; font-size: 18px; margin-bottom: 15px;">$1000</p>
+                    <button class="blog-btn" onclick="addToCart(12)" style="border: none; cursor: pointer; width: 100%;">Añadir</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p style="margin: 0; color: #D3D3D3;">&copy; 2026 Level-Up Gamer. Desafía tus límites.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

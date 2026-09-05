@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Level-Up Gamer</title>
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <a href="../PaginaMadre.html" class="navbar-brand">👾 Level-Up Gamer</a>
+            
+            <nav class="navbar-nav" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                <a href="../PaginaMadre.html" class="nav-link">Home</a>
+                <a href="Productos.html" class="nav-link active">Productos</a>
+                <a href="Nosotros.html" class="nav-link">Nosotros</a>
+                <a href="Blogs.html" class="nav-link">Blogs</a>
+                <a href="Contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="navbar-nav" style="display: flex;">
+                <a href="Carrito.html" class="nav-link" style="text-decoration: none;">
+                    🛒 Cart (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main style="max-width: 1100px; margin: 0 auto;">
+        <!-- Breadcrumb / Migas de pan -->
+        <nav style="margin-bottom: 25px; color: #D3D3D3; font-size: 14px;">
+            <a href="../PaginaMadre.html" style="color: #1E90FF; text-decoration: none;">Home</a> &gt; 
+            <a href="Productos.html" style="color: #1E90FF; text-decoration: none;">Periféricos</a> &gt; 
+            <span style="color: #FFFFFF;">Mouse Gamer Pro X</span>
+        </nav>
+
+        <!-- SECCIÓN DETALLE PRODUCTO -->
+        <div class="blog-card" style="padding: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+            
+            <!-- Visor de Imágenes con Miniaturas -->
+            <div>
+                <img id="main-image" src="https://via.placeholder.com/500x380/000000/1E90FF?text=Mouse+Gamer+Pro+X" alt="Mouse Gamer Pro X" style="width: 100%; height: 350px; object-fit: cover; border-radius: 8px; border: 1px solid #1E90FF;">
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <img src="https://via.placeholder.com/100x100/000000/1E90FF?text=Vista+1" class="thumb-img" onclick="changeImage(this.src)" style="width: 80px; height: 80px; border: 2px solid #1E90FF; border-radius: 6px; cursor: pointer;">
+                    <img src="https://via.placeholder.com/100x100/000000/39FF14?text=Vista+2" class="thumb-img" onclick="changeImage(this.src)" style="width: 80px; height: 80px; border: 2px solid #1E90FF; border-radius: 6px; cursor: pointer;">
+                    <img src="https://via.placeholder.com/100x100/000000/FFFFFF?text=Vista+3" class="thumb-img" onclick="changeImage(this.src)" style="width: 80px; height: 80px; border: 2px solid #1E90FF; border-radius: 6px; cursor: pointer;">
+                </div>
+            </div>
+
+            <!-- Información del Producto -->
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 28px; color: #FFFFFF; margin: 0;">Mouse Gamer Pro X</h1>
+                    <span style="font-family: 'Orbitron', sans-serif; font-size: 28px; color: #39FF14; font-weight: bold;">$15.000</span>
+                </div>
+
+                <hr style="border-color: #1E90FF; width: 100%;">
+
+                <p style="color: #D3D3D3; line-height: 1.6; margin: 0;">
+                    El Mouse Gamer Pro X ofrece una precisión ultra alta gracias a sus 16.000 DPI ajustables, switches mecánicos de alta durabilidad y un diseño ergonómico pensado para sesiones extensas de juego. Incluye iluminación RGB personalizable.
+                </p>
+
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                    <label for="product-qty" style="font-family: 'Orbitron', sans-serif; font-size: 14px;">Cantidad:</label>
+                    <select id="product-qty" style="padding: 8px 15px; background: #000; color: #FFF; border: 1px solid #1E90FF; border-radius: 6px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <button onclick="addCurrentProductToCart()" class="blog-btn" style="border: none; cursor: pointer; text-align: center; margin-top: 15px; width: 100%; font-size: 16px;">
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+
+        <!-- PRODUCTOS RELACIONADOS -->
+        <div style="margin-top: 60px;">
+            <h3 style="font-family: 'Orbitron', sans-serif; color: #FFFFFF; font-size: 20px; border-bottom: 2px solid #1E90FF; padding-bottom: 10px; margin-bottom: 25px;">
+                Related Products
+            </h3>
+            <div class="Blog" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px;">
+                <div class="blog-card" style="text-align: center; padding: 10px;">
+                    <img src="https://via.placeholder.com/200x150?text=Audifonos" style="height: 130px;">
+                    <div class="blog-content" style="padding: 10px;">
+                        <h3 style="font-size: 15px;">Audífonos RGB</h3>
+                        <p style="color: #39FF14; font-weight: bold; margin-bottom: 10px;">$25.000</p>
+                    </div>
+                </div>
+                <div class="blog-card" style="text-align: center; padding: 10px;">
+                    <img src="https://via.placeholder.com/200x150?text=Teclado" style="height: 130px;">
+                    <div class="blog-content" style="padding: 10px;">
+                        <h3 style="font-size: 15px;">Teclado Mecánico</h3>
+                        <p style="color: #39FF14; font-weight: bold; margin-bottom: 10px;">$35.000</p>
+                    </div>
+                </div>
+                <div class="blog-card" style="text-align: center; padding: 10px;">
+                    <img src="https://via.placeholder.com/200x150?text=Mousepad" style="height: 130px;">
+                    <div class="blog-content" style="padding: 10px;">
+                        <h3 style="font-size: 15px;">Mousepad XXL</h3>
+                        <p style="color: #39FF14; font-weight: bold; margin-bottom: 10px;">$8.000</p>
+                    </div>
+                </div>
+                <div class="blog-card" style="text-align: center; padding: 10px;">
+                    <img src="https://via.placeholder.com/200x150?text=Silla" style="height: 130px;">
+                    <div class="blog-content" style="padding: 10px;">
+                        <h3 style="font-size: 15px;">Silla Gamer</h3>
+                        <p style="color: #39FF14; font-weight: bold; margin-bottom: 10px;">$120.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p style="margin: 0; color: #D3D3D3;">&copy; 2026 Level-Up Gamer. Desafía tus límites.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        function changeImage(src) {
+            document.getElementById('main-image').src = src;
+        }
+
+        function addCurrentProductToCart() {
+            const qty = parseInt(document.getElementById('product-qty').value);
+            const producto = {
+                id: 101,
+                nombre: "Mouse Gamer Pro X",
+                precio: 15000,
+                imagen: "https://via.placeholder.com/150?text=Mouse+Pro",
+                descripcion: "Mouse ergonómico con sensor óptico de alta precisión."
+            };
+            addToCart(producto, qty);
+        }
+    </script>
+</body>
+</html>

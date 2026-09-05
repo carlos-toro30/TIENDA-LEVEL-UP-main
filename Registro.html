@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Level-Up Gamer</title>
+    <!-- Fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <a href="../PaginaMadre.html" class="navbar-brand">👾 Level-Up Gamer</a>
+            
+            <nav class="navbar-nav" style="display: flex; list-style: none; margin: 0; padding: 0;">
+                <a href="../PaginaMadre.html" class="nav-link">Inicio</a>
+                <a href="Productos.html" class="nav-link">Productos</a>
+                <a href="Nosotros.html" class="nav-link">Nosotros</a>
+                <a href="Blogs.html" class="nav-link">Blogs</a>
+                <a href="Contactos.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="navbar-nav" style="display: flex;">
+                <div class="nav-link active" onclick="toggleCart()" style="cursor: pointer;">
+                    🛒 Carrito (<span id="cart-count">0</span>)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL Y FORMULARIO DE REGISTRO -->
+    <main>
+        <h2>Registro de Usuario</h2>
+
+        <div class="Blog" style="grid-template-columns: 1fr; max-width: 600px;">
+            <div class="blog-card">
+                <div class="blog-content">
+                    <form id="registro-form" novalidate style="display: flex; flex-direction: column; gap: 18px;">
+                        
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-run" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                RUN (Sin puntos ni guion, ej: 19011022K):
+                            </label>
+                            <input type="text" id="reg-run" minlength="7" maxlength="9" style="padding: 10px; background-color: #000000; border: 1px solid #3afa00; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                            <span class="error-msg" id="err-reg-run" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-nombre" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Nombre:
+                            </label>
+                            <input type="text" id="reg-nombre" maxlength="50" style="padding: 10px; background-color: #000000; border: 1px solid #3afa00; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                            <span class="error-msg" id="err-reg-nombre" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-apellidos" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Apellidos:
+                            </label>
+                            <input type="text" id="reg-apellidos" maxlength="100" style="padding: 10px; background-color: #000000; border: 1px solid #3afa00; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                            <span class="error-msg" id="err-reg-apellidos" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-email" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Correo Electrónico:
+                            </label>
+                            <input type="email" id="reg-email" maxlength="100" style="padding: 10px; background-color: #000000; border: 1px solid #3afa00; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                            <span class="error-msg" id="err-reg-email" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-region" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Región:
+                            </label>
+                            <select id="reg-region" style="padding: 10px; background-color: #000000; border: 1px solid #34ff02; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                                <option value="">Seleccione una región</option>
+                            </select>
+                            <span class="error-msg" id="err-reg-region" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-comuna" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Comuna:
+                            </label>
+                            <select id="reg-comuna" disabled style="padding: 10px; background-color: #000000; border: 1px solid #04f718; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                                <option value="">Seleccione primero una región</option>
+                            </select>
+                            <span class="error-msg" id="err-reg-comuna" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 8px;">
+                            <label for="reg-direccion" style="font-family: 'Orbitron', sans-serif; font-size: 13px; color: #FFFFFF;">
+                                Dirección:
+                            </label>
+                            <input type="text" id="reg-direccion" maxlength="300" style="padding: 10px; background-color: #000000; border: 1px solid #31ff1e; color: #FFFFFF; border-radius: 6px; font-family: 'Roboto', sans-serif;">
+                            <span class="error-msg" id="err-reg-direccion" style="color: #39FF14; font-size: 13px;"></span>
+                        </div>
+
+                        <button type="submit" class="blog-btn" style="border: none; cursor: pointer; text-align: center; margin-top: 10px;">
+                            Registrarse
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p style="margin: 0; color: #D3D3D3;">&copy; 2026 Level-Up Gamer. Desafía tus límites.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
